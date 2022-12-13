@@ -8,17 +8,22 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postProducts = (req, res, next) => {
-  // products.push({ title: req.body.title, price: req.body.price, description: req.body.description ,img: req.body.img });
-  const product = new Product(req.body.title);
+  const product = new Product(
+    req.body.title,
+    req.body.price,
+    req.body.description,
+    req.body.img
+  );
   product.save();
   res.redirect("/");
 };
 
 exports.getProducts = (req, res, next) => {
-  const products = Product.fetchAll();
-  res.render("shop", {
-    prods: products,
-    pageTitle: "Bookly - Shop",
-    path: "/",
+  Product.fetchAll((products) => {
+    res.render("shop", {
+      prods: products,
+      pageTitle: "Bookly - Shop",
+      path: "/",
+    });
   });
 };

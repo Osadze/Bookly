@@ -1,6 +1,7 @@
 .main-wrapper {
   background-color: var(--main-color-4);
   height: 100vh;
+
 }
 
 .nav-logo:hover {

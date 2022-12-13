@@ -33,7 +33,7 @@ h1 {
 .slider-thumb::before {
   margin: 200px auto;
   content: "";
-  width: 500px;
+  width: 25vw;
   height: 500px;
   background: var(--main-color-4);
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
