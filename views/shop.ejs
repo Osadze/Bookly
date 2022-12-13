@@ -1,0 +1,54 @@
+<%- include('includes/head.ejs') %>
+    <%- include('includes/nav.ejs') %>
+        <!-- <main class="product-cnt">
+            <%if (prods.length> 0) {%>
+                <% for (let product of prods) { %>
+                    <div class="product-item">
+                        <header class="product__header">
+                            <h2 class="title">
+                                <%= product.title %>
+                            </h2>
+                        </header>
+                        <div class="product__img__cnt">
+                            <img src="<%= product.img %>" alt="product image" class="product__img">
+                        </div>
+                        <div class="product__content">
+                            <p class="discription">
+                                Description: <%= product.description %>
+                            </p>
+                            <h2 class="price">
+                                Price: <%= product.price %>
+                            </h2>
+                        </div>
+                        <div class="acions"></div>
+                        <button class="btn">Add To Cart</button>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <h1>No Products</h1>
+                            <% } %>
+        </main> -->
+
+        <main class="product-cnt">
+            <%if (prods.length> 0) {%>
+                <% for (let product of prods) { %>
+                    <div class="product__card">
+                        <a href="#">
+                            <div class="product__image" style="background-image: url('<%= product.img %>');">
+                            </div>
+                        </a>
+                        <div class="product__description__cnt">
+                            <h2 class="product__title" ><%= product.title %> </h2>
+                            <p class="product__description" ><%= product.description %></p>
+                        </div>
+                        <div class="addTo__cart__cnt" href="#">
+                            <h4 class="product__price" ><i class="addTo__cart__icon"></i><%= product.price %></h4>
+                        </div>
+                    </div>
+                    <% } %>
+                        <% } else { %>
+                            <h1 class="no__products">No Products</h1>
+                            <% } %>
+        </main>
+
+        <%- include('includes/end.ejs') %>

@@ -1,0 +1,39 @@
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/add-product.css">
+    <%- include('includes/nav.ejs') %>
+
+
+        <main class="add-product-cnt">
+            <form action="/admin/add-product" method="POST">
+                <div class="img add-product-input">
+                    <input placeholder="Img Url" id='img' type="text" name="img">
+                </div>
+                <div class="title add-product-input">
+                    <input placeholder="Book Title" id='title' type="text" name="title">
+                </div>
+                <div class="desc add-product-input">
+                    <input placeholder="Book Description" id='description' type="text" name="description">
+                </div>
+                <div class="price add-product-input">
+                    <input placeholder="Book Price" id='price' type="text" name="price">
+                </div>
+                <button class="fill" type="submit">Add product</button>
+
+            </form>
+        </main>
+
+
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        </div>
+        <%- include('includes/end.ejs') %>

@@ -1,0 +1,62 @@
+.main-wrapper {
+    height: 100vh;
+    background: var(--main-color-1);
+}
+
+.navbar-items a, .nav-logo {
+    color: var(--main-color-4);
+}
+
+.navbar-items a:hover, .nav-logo:hover {
+    color: var(--main-color-4);
+
+}
+
+.cnt-404 {
+    position: absolute;
+    top: 400px;
+    left: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h2, h1 {
+    font-family: phenomena ;
+    color: var(--main-color-1);
+
+}
+
+.slider-thumb::before {
+    margin: 200px auto;
+    content: "";
+    width: 500px;
+    height: 500px;
+    background: var(--main-color-4);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape {
+    0%,
+    100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+}
+    34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+}
+    50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+}
+    67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+}
+}
