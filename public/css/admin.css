@@ -6,45 +6,45 @@
 ADD TO CART ------- https://www.flaticon.com/free-icon/add-to-cart_6737598?term=add%20to%20cart&page=1&position=22&page=1&position=22&related_id=6737598&origin=search */
 
 /* edit and deletre buttons */
-  
+
 .edit__icon {
-    background-color: var(--white-color);  
-    background-image: url(../img/edit-green.png);
-    border-radius: 5px; 
-    display: block;
-    height: 34px;
-    width: 34px;
-    background-size: 27px;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: var(--white-color);
+  background-image: url(../img/edit-green.png);
+  border-radius: 5px;
+  display: block;
+  height: 34px;
+  width: 34px;
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
-    box-shadow: 2px 2px 2px #525252;
+  box-shadow: 2px 2px 2px #525252;
 }
 
 .delete__icon {
-    background-color: var(--white-color);  
-    background-image: url(../img/delete-red.png);
-    border-radius: 5px; 
-    display: block;
-    height: 34px;
-    width: 34px;
-    background-size: 27px;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: var(--white-color);
+  background-image: url(../img/delete-red.png);
+  border-radius: 5px;
+  display: block;
+  height: 34px;
+  width: 34px;
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
-    box-shadow: 2px 2px 2px #525252;
+  box-shadow: 2px 2px 2px #525252;
 }
 
 .edit__icon:hover {
-    background-color: var(--main-color-3);  
-    background-image: url(../img/edit-white.png);
+  background-color: var(--main-color-3);
+  background-image: url(../img/edit-white.png);
 }
 
 .delete__icon:hover {
-    background-color: var(--red-color);  
-    background-image: url(../img/delete-white.png);
+  background-color: var(--red-color);
+  background-image: url(../img/delete-white.png);
 }

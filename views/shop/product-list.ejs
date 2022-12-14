@@ -17,7 +17,9 @@
                             </p>
                         </div>
                         <div class="product__footer">
-                                <a href="#" id="addToCart"><i class="addTo__cart__icon"></i></a>
+                            <form action="/add-to-cart" method="POST" id="addToCart">
+                                <button type="submit"><i class="addTo__cart__icon"></i></button>
+                            </form>
                             <h4 class="product__price">
                                 $ <%= product.price %>
                             </h4>

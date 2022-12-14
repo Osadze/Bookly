@@ -1,7 +1,6 @@
 .main-wrapper {
   background-color: var(--main-color-4);
   min-height: 100vh;
-
 }
 
 .nav-logo:hover {
@@ -145,7 +144,8 @@
   font-weight: bold;
 }
 
-.add-product-cnt input, .add-product-cnt textarea {
+.add-product-cnt input,
+.add-product-cnt textarea {
   width: 250px;
   padding: 10px 10px 10px 10px;
   border: none;
@@ -160,7 +160,8 @@
   -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.add-product-cnt input:focus, .add-product-cnt textarea:focus {
+.add-product-cnt input:focus,
+.add-product-cnt textarea:focus {
   outline: none;
   border: 1px solid rgb(136, 136, 136);
 }
