@@ -1,3 +1,26 @@
 <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/details-page.css">
     <%- include('../includes/nav.ejs') %>
-<%- include('../includes/end.ejs') %>
+        <main class="details__wrapper">
+
+            <img class="details__product__image" src='<%= product.img %>'>
+            </img>
+            <div class="title__cnt">
+                <h2 class="details__product__title">
+                    <%= product.title %>
+                </h2>
+
+                <p class="details__product__description">
+                    <%= product.description %>
+                </p>
+                <h2 class="details__product__price">
+                    $ <%= product.price %>
+                 </h2>
+                 <form action="/add-to-cart" method="POST" id="addToCart">
+                    <button class="addTo__cart__btn" type="submit">Add To Cart</button>
+                </form>
+            </div>
+
+
+        </main>
+        <%- include('../includes/end.ejs') %>

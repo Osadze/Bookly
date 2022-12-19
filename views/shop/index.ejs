@@ -4,7 +4,7 @@
             <%if (prods.length> 0) {%>
                 <% for (let product of prods) { %>
                     <div class="product__card">
-                        <a href="#">
+                        <a href="/products/<%= product.id %>">
                             <div class="product__image" style="background-image: url('<%= product.img %>');">
                             </div>
                         </a>
@@ -17,6 +17,7 @@
                             </p>
                         </div>
                         <div class="product__footer">
+                            <a href="/products/<%= product.id %>"><i class="details__icon"></i></a>
                             <form action="/add-to-cart" method="POST" id="addToCart">
                                 <button type="submit"><i class="addTo__cart__icon"></i></button>
                             </form>

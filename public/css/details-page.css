@@ -1,0 +1,103 @@
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main-color-1);
+}
+
+.nav-logo {
+  color: var(--main-color-4);
+}
+
+.nav-logo:hover {
+  color: var(--main-color-3);
+}
+
+.navbar-items a {
+  color: var(--main-color-4);
+}
+
+.navbar-items a:hover {
+  color: var(--main-color-3);
+}
+
+/* //////////////////////////////////////////////////// */
+
+.details__wrapper {
+  margin: 0 auto;
+  padding: 3vw 5vw;
+  gap: 50px;
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #333333;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  background: linear-gradient(78.43deg, #fbeeee -27.34%, #f7fffe 89.92%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.details__product__image {
+  min-width: 280px;
+  height: 420px;
+  border: 10px solid var(--white-color);
+  box-shadow: 2px 6px 34px 4px rgba(63, 63, 63, 0.08);
+
+  
+}
+
+.title__cnt {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details__product__title {
+  width: 25vw;
+  font-size: 2.5rem;
+  font-family: Manrope;
+  text-transform: capitalize;
+  color: var(--main-color-4);
+  padding: 4px 2px;
+  border-bottom: 2px solid var(--orange-color);
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.details__product__description {
+  font-size: 1.2em;
+  color: rgb(71, 71, 71);
+  line-height: 130%;
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s ease-out;
+}
+
+.details__product__price {
+  font-size: 2rem;
+  color: var(--orange-color);
+  margin-top: 10px;
+}
+
+.addTo__cart__btn {
+  margin-top: 40px;
+  color: var(--main-color-4);
+  border: 2px solid var(--main-color-4);
+  border-radius: 7px;
+  background: none;
+  padding: 14px 35px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.addTo__cart__btn:hover {
+  color: var(--white-color);
+  border: 2px solid var(--orange-color);
+  background-color: var(--orange-color);
+}
