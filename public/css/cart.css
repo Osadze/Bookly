@@ -2,3 +2,25 @@
     margin: 158px auto;
 }
 
+.delete__icon {
+    background-color: var(--white-color);
+    background-image: url(../img/delete-red.png);
+    border-radius: 5px;
+    display: block;
+    height: 34px;
+    width: 34px;
+    background-size: 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
+    box-shadow: 2px 2px 2px #525252;
+  }
+
+  
+  .delete__icon:hover {
+    background-color: var(--red-color);
+    background-image: url(../img/delete-white.png);
+  }
+  
