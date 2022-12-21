@@ -21,6 +21,11 @@
   color: var(--main-color-3);
 }
 
+.active {
+  color: var(--orange-color) !important;
+  border-bottom: 2px solid var(--orange-color);
+}
+
 /* //////////////////////////////////////////////////// */
 
 .details__wrapper {
@@ -39,12 +44,11 @@
 }
 
 .details__product__image {
-  min-width: 280px;
+  width: 280px;
   height: 420px;
+  object-fit: cover;
   border: 10px solid var(--white-color);
   box-shadow: 2px 6px 34px 4px rgba(63, 63, 63, 0.08);
-
-  
 }
 
 .title__cnt {
@@ -57,6 +61,7 @@
 .details__product__title {
   width: 25vw;
   font-size: 2.5rem;
+  line-height: 100%;
   font-family: Manrope;
   text-transform: capitalize;
   color: var(--main-color-4);

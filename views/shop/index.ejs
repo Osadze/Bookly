@@ -5,7 +5,7 @@
                 <% for (let product of prods) { %>
                     <div class="product__card">
                         <a href="/products/<%= product.id %>">
-                            <div class="product__image" style="background-image: url('<%= product.img %>');">
+                            <div class="product__image" style="background-image: url('<% if(product.img) {%><%=product.img%> <%} else { %>https://graphberry-imgs.imgix.net/Top%20View%20Book%20PSD%20Mockup.jpg?auto=compress,format&q=80&w=800 <% } %>');">
                             </div>
                         </a>
                         <div class="product__description__cnt">
@@ -18,8 +18,9 @@
                         </div>
                         <div class="product__footer">
                             <a href="/products/<%= product.id %>"><i class="details__icon"></i></a>
-                            <form action="/add-to-cart" method="POST" id="addToCart">
+                            <form action="/cart" method="POST" id="addToCart">
                                 <button type="submit"><i class="addTo__cart__icon"></i></button>
+                                <input type="hidden" name="productId" value="<%= product.id %>">
                             </form>
                             <h4 class="product__price">
                                 $ <%= product.price %>
