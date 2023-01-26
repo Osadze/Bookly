@@ -1,36 +1,27 @@
 <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/index.css">
     <%- include('../includes/nav.ejs') %>
-        <main class="product-cnt">
-            <%if (prods.length> 0) {%>
-                <% for (let product of prods) { %>
-                    <div class="product__card">
-                        <a href="/products/<%= product.id %>">
-                            <div class="product__image" style="background-image: url('<% if(product.img) {%><%=product.img%> <%} else { %>https://graphberry-imgs.imgix.net/Top%20View%20Book%20PSD%20Mockup.jpg?auto=compress,format&q=80&w=800 <% } %>');">
-                            </div>
-                        </a>
-                        <div class="product__description__cnt">
-                            <h2 class="product__title">
-                                <%= product.title %>
-                            </h2>
-                            <p class="product__description">
-                                <%= product.description %>
-                            </p>
-                        </div>
-                        <div class="product__footer">
-                            <a href="/products/<%= product.id %>"><i class="details__icon"></i></a>
-                            <form action="/cart" method="POST" id="addToCart">
-                                <button type="submit"><i class="addTo__cart__icon"></i></button>
-                                <input type="hidden" name="productId" value="<%= product.id %>">
-                            </form>
-                            <h4 class="product__price">
-                                $ <%= product.price %>
-                            </h4>
-                        </div>
-                    </div>
-                    <% } %>
-                        <% } else { %>
-                            <h1 class="no__products">No Products</h1>
-                            <% } %>
-        </main>
-
+        <section class="hero__main">
+            <div class="hero__cnt1">
+                <h1>2022 Best Sellers</h1>
+                <h4>Explore The New York Times Bestseller list to find your next read. Browse a wide variety of
+                    bestselling books, including fiction, non-fiction, and more.</h4>
+                <a href="/blog"><button class="btn">Read More</button></a>
+            </div>
+            <div class="hero__img">
+            </div>
+        </section>
+        <section id="topCategories" class="categories__main">
+            <a class="categories__item education__item" href="/categories"><span> Higher Education</span></a>
+            <a class="categories__item all__categories" href="/categories"><span>Explore our Top Categories</span>
+                <button class="btn">View All</button></a>
+            <a class="categories__item management__item " href="/categories"><span>Management Books</span></a>
+            <a class="categories__item finance__item" href="/categories"><span>Finance Books</span></a>
+            <a class="categories__item engineering__item" href="/categories"><span>Engineering Books</span></a>
+            <a class="categories__item commerce__item" href="/categories"><span>Commerce books</span></a>
+            <a class="categories__item management__item " href="/categories"><span>Management Books</span></a>
+            <a class="categories__item finance__item" href="/categories"><span>Finance Books</span></a>
+            <a class="categories__item engineering__item" href="/categories"><span>Engineering Books</span></a>
+            <a class="categories__item commerce__item" href="/categories"><span>Commerce books</span></a>
+        </section>
         <%- include('../includes/end.ejs') %>

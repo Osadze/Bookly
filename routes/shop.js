@@ -6,7 +6,9 @@ const shopController = require("../controllers/shop");
 
 const router = express.Router();
 
-router.get("/", shopController.getIndex);
+router.get("/", shopController.getMain);
+
+router.get("/products", shopController.getIndex);
 
 router.get("/products", shopController.getProducts);
 

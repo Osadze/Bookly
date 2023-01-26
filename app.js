@@ -5,6 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const errorController = require("./controllers/error");
+const db = require("./util/database");
 
 const app = express();
 
@@ -22,4 +23,4 @@ app.use(shopRoutes);
 
 app.use(errorController.error404Page);
 
-app.listen(3000);
+app.listen(3001);

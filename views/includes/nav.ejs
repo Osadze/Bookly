@@ -1,15 +1,65 @@
 <body>
     <div class="main-wrapper">
-        <header class="main-header">
-            <a href="/" class="nav-logo">Bookly</a>
-            <nav>
-                <ul class="navbar-items">
-                    <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Shop</a></li>
-                    <li><a href="/products" class="<%= path === '/products' ? 'active' : '' %>">Products</a></li>
-                    <li><a href="/cart" class="<%= path === '/cart' ? 'active' : '' %>">Cart</a></li>
-                    <li><a href="/orders" class="<%= path === '/orders' ? 'active' : '' %>">Orders</a></li>
-                    <li><a href="/admin/add-product" class="<%= path === '/admin/add-product' ? 'active' : '' %>">Add Product</a></li>
-                    <li><a href="/admin/products" class="<%= path === '/admin/products' ? 'active' : '' %>">Admin Products</a></li>
+        <header class="header__cnt">
+            <div class="socials__header">
+                <div class="phone__number__cnt">
+                    <i class="phone__icon icon"></i>
+                    <h2 class="phone__number">+995 598 89 03 81</h2>
+                </div>
+                <ul class="social__icons">
+                    <li class="linkedin"><i class="icon"></i></li>
+                    <li class="github"><i class="icon"></i></li>
+                    <li class="instagram"><i class="icon"></i></li>
+                    <li class="facebook"><i class="icon"></i></li>
                 </ul>
-            </nav>
+            </div>
+            <div class="main__header">
+                <!-- <a href="/" class="nav__logo">Bookly</a> -->
+                <svg class="ham hamRotate ham7 navbar__toggle" viewBox="0 0 100 100" width="70" aria-pressed="false">
+                    <path class="line top"
+                        d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+                    <path class="line middle" d="m 70,50 h -40" />
+                    <path class="line bottom"
+                        d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+                </svg>
+                <div class="main__logo">
+                    <a href="/">
+                        <svg width="100%" height="100%">
+                            <text x="50%" y="60%" text-anchor="middle">
+                                Bookly
+                            </text>
+                        </svg>
+                    </a>
+                </div>
+                <form class="search__cnt">
+                    <input id="search" type="search" pattern=".*\S.*" placeholder="Search Books">
+                    <button type="submit" class="search__btn"><i class="icon"></i></button>
+                </form>
+                <ul class="navbar__items">
+                    <li class="cart"><i class="icon cart__icon"></i><a href="/cart"
+                            class="<%= path === '/cart' ? 'active cart' : 'cart' %>">Cart</a></li>
+                    <li class="user"><i class="icon user__icon"></i><a href="/user-profile"
+                            class="<%= path === '/user-profile' ? 'active user' : 'user' %>">Account</a></li>
+                    <li class="heart"><i class="icon heart__icon"></i><a href="/admin/add-product"
+                            class="<%= path === '/admin/add-product' ? 'active wishlist' : 'wishlist' %>">Wishlist</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="sub__header" data-visible="false">
+                <hr class="header__divider">
+                <ul class="navbar__items">
+                    <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+                    <li><a href="/products" class="<%= path === '/products' ? 'active' : '' %>">Books</a></li>
+                    <li><a href="/about" class="<%= path === '/about' ? 'active' : '' %>">About Us</a></li>
+                    <li><a href="/blog" class="<%= path === '/blog' ? 'active' : '' %>">Blog</a></li>
+                    <li><a href="#topCategories" class="">Categories</a></li>
+                    <li><a href="/admin/add-product" class="<%= path === '/admin/add-product' ? 'active' : '' %>">Add
+                            Product</a></li>
+                    <li><a href="/admin/products" class="<%= path === '/admin/products' ? 'active' : '' %>">Admin
+                            Products</a></li>
+                </ul>
+            </div>
         </header>
+        <main class="main__section">
