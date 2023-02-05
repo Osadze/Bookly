@@ -1,36 +1,61 @@
 <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/products.css">
     <%- include('../includes/nav.ejs') %>
-        <main class="product-cnt">
-            <%if (prods.length> 0) {%>
-                <% for (let product of prods) { %>
-                    <div class="product__card">
-                        <a href="/products/<%= product.id %>">
-                            <div class="product__image" style="background-image: url('<%= product.img %>');">
+        <main class="product-cnt main__pa">
+            <section class="filter__cnt">
+                <button class="price__filter">Price +</button>
+                <hr>
+                <button class="category__filter">Category +</button>
+                <hr>
+            </section>
+            <section class="books__cnt">
+                <div class="sub__filter">
+                    <select class="alphabet__sort" name="Alphabetically" id="alphabetSort">
+                        <option value="0">Sort by : Alphabetically, A-Z</option>
+                        <option value="1">Z-A</option>
+                    </select>
+                    <h4 class="filter__msg">Showing 1 - 12 of 26 result</h4>
+                    <form class="search__cnt">
+                        <input id="search" type="search" pattern=".*\S.*" placeholder="Search Books">
+                    </form>
+                </div>
+                <div class="product">
+                    <%if (prods.length> 0) {%>
+                        <% for (let product of prods) { %>
+                            <div class="product__card">
+                                <div class="product__img__cnt">
+                                    <a href="/products/<%= product.id %>">
+                                        <img class="product__image" src="https://storage.googleapis.com/du-prd/books/images/9781501110375.jpg">
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="product__description__cnt">
+                                    <h2 class="product__title">
+                                        <%= product.title %>
+                                    </h2>
+                                    <p class="product__author">
+                                        <%= product.description %>
+                                    </p>
+                                    <h4 class="product__price">
+                                        $ <%= product.price %>
+                                    </h4>
+                                </div>
+                                <div class="product__add__to__cart">
+                                    <!-- <a href="/products/<%= product.id %>"><i class="details__icon"></i></a> -->
+                                    <form action="/cart" method="POST" id="addToCart">
+                                        <button type="submit"><i class="addTo__cart__icon"></i></button>
+                                        <input type="hidden" name="productId" value="<%= product.id %>">
+                                    </form>
+   
+                                </div>
                             </div>
-                        </a>
-                        <div class="product__description__cnt">
-                            <h2 class="product__title">
-                                <%= product.title %>
-                            </h2>
-                            <p class="product__description">
-                                <%= product.description %>
-                            </p>
-                        </div>
-                        <div class="product__footer">
-                            <a href="/products/<%= product.id %>"><i class="details__icon"></i></a>
-                            <form action="/cart" method="POST" id="addToCart">
-                                <button type="submit"><i class="addTo__cart__icon"></i></button>
-                                <input type="hidden" name="productId" value="<%= product.id %>">
-                            </form>
-                            <h4 class="product__price">
-                                $ <%= product.price %>
-                            </h4>
-                        </div>
-                    </div>
-                    <% } %>
-                        <% } else { %>
-                            <h1 class="no__products">No Products</h1>
                             <% } %>
+                                <% } else { %>
+                                    <h1 class="no__products">No Products</h1>
+                                    <% } %>
+                </div>
+            </section>
+
         </main>
 
         <%- include('../includes/end.ejs') %>

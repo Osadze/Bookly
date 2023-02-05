@@ -116,52 +116,44 @@
   }
 }
 
-.add-product-cnt {
-  background-color: #fff;
-  margin: 0 auto;
-  max-width: 400px;
+.add__product__cnt {
   padding: 30px;
-  margin-top: 250px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 10px #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
+  width: fit-content;
+
 }
 
-.add-product-cnt form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
+.add__product__cnt form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem;
 }
 
-.add-product-cnt label {
-  line-height: 1px;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.add-product-cnt input,
-.add-product-cnt textarea {
-  width: 250px;
-  padding: 10px 10px 10px 10px;
-  border: none;
-  border: 1px solid black;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: Manrope;
+.add__product__cnt input,
+.add__product__cnt textarea {
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid rgb(173, 173, 173);
+  font-size: 0.9rem;
+  font-family: Calibri;
   color: var(--main-color-4);
-  font-weight: bold;
   resize: none;
+  text-transform: capitalize;
   -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.add-product-cnt input:focus,
-.add-product-cnt textarea:focus {
+
+.title, .desc,.price,.img {
+  grid-column: 1/3;
+}
+
+.price {
+  width: fit-content !important
+}
+
+.add__product__cnt input:focus,
+.add__product__cnt textarea:focus {
   outline: none;
   border: 1px solid rgb(136, 136, 136);
 }
@@ -176,35 +168,10 @@
   margin-top: 25px;
 }
 
-.fill {
-  font-family: phenomena;
-  font-size: 1rem;
-  font-weight: 200;
-  letter-spacing: 1px;
-  padding: 13px 50px 13px;
-  outline: 0;
-  border: 1px solid black;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--main-color-1);
-}
-
-.fill::after {
-  content: "";
-  background-color: var(--main-color-3);
-  border-radius: 10px;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
-}
-
-.fill:hover::after {
-  top: 0px;
-  left: 0px;
+.admin__btn {
+  border: none;
+  background-color: rgb(20, 140, 253);
+  color: #fff;
+  padding: 0.4rem 3.75rem;
+  text-transform: capitalize;
 }

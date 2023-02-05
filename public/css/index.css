@@ -1,3 +1,84 @@
+@font-face {
+  font-family: phenomena-bold;
+  src: url(../fonts/Phenomena-Black.woff);
+}
+
+@font-face {
+  font-family: phenomena;
+  src: url(../fonts/Phenomena-regular.woff);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: calibri;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color-1: #393280;
+  --main-color-2: #ed553b;
+  --main-color-3: #bcbcbc;
+  --main-color-4: #111111;
+  --main-color-5: #e0e0e0;
+  --white-color: #fdfdfd;
+  --main-padding: 0 8vw;
+}
+
+/* animation stopper while resizing the window */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+/* animation stopper while resizing the window */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px !important;
+  background-color: var(--main-color-4) !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px !important;
+  background-color: var(--main-color-4) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px !important;
+  background: linear-gradient(
+    45deg,
+    var(--main-color-1),
+    var(--main-color-2)
+  ) !important;
+}
+
+/* //////////////////////////////////////// */
+
+.main-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+
+
 .hero__main {
   display: flex;
   justify-content: space-between;
@@ -56,13 +137,11 @@
 /* CATEGORIES */
 
 .categories__main {
-  padding: 40px 8vw;
+  padding: 40px 20vw;
   display: grid;
-  width: 800px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
   gap: 10px;
-
 }
 
 .categories__item {
@@ -76,10 +155,8 @@
   text-decoration: none;
   display: flex;
   align-items: flex-end;
-  width: 250px;
+  /* width: 250px; */
   aspect-ratio: 1;
-
-
 }
 
 .categories__item span {

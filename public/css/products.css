@@ -1,0 +1,127 @@
+.product-cnt {
+  display: grid;
+  grid-template-columns: 1.5fr 10.5fr;
+  gap: 11.5rem;
+}
+
+.filter__cnt {
+  padding-top: 0.7rem;
+}
+
+.filter__cnt button {
+  background-color: transparent;
+  border: none;
+  color: var(--main-color-1);
+  font-size: 1rem;
+  font-family: Manrope;
+  font-weight: bold;
+}
+
+.filter__cnt hr {
+  border-color: #f5f5f5;
+  background-color: transparent;
+  margin: 0.625rem 0;
+}
+
+.books__cnt {
+}
+
+.sub__filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.alphabet__sort {
+  background-color: transparent;
+  border: none;
+  color: var(--main-color-1);
+  font-size: 1rem;
+  font-family: Manrope;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.filter__msg {
+  color: var(--main-color-1);
+  font-size: 1rem;
+  font-family: Manrope;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.product-cnt .search__cnt > input {
+  width: clamp(100px, 20vw, 250px);
+  padding: 0.8125em 1.0625em;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  color: var(--main-color-3);
+  font-weight: 600;
+  font-family: Manrope;
+  background: #f5f5f5;
+  border-radius: 20px;
+  border: none;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: flex-start;
+  margin-right: 12vw;
+  margin-top: 2rem;
+  gap: 10px;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product__img__cnt {
+  background: #ffffff;
+  border: 1px solid #eae8df;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+}
+
+.product__image {
+  width: 200px;
+  height: 290px;
+}
+
+.product__description__cnt {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product__title {
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--main-color-1);
+  font-family: manrope;
+  font-weight: bold;
+}
+
+.product__author {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #888888;
+}
+
+.product__price {
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--main-color-2);
+}
