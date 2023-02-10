@@ -92,6 +92,7 @@
 .product__image {
   width: 200px;
   height: 290px;
+  object-fit: cover;
 }
 
 .product__description__cnt {
