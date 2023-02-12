@@ -1,50 +1,35 @@
-/* used icons */
-/* EDIT ------- https://www.flaticon.com/free-icon/edit_860814?term=edit&page=1&position=8&page=1&position=8&related_id=860814&origin=search
+.admin__edit__footer {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
 
-/* DELETE ------- https://www.flaticon.com/free-icon/edit_860814?term=edit&page=1&position=8&page=1&position=8&related_id=860814&origin=search
-
-ADD TO CART ------- https://www.flaticon.com/free-icon/add-to-cart_6737598?term=add%20to%20cart&page=1&position=22&page=1&position=22&related_id=6737598&origin=search */
-
-/* edit and deletre buttons */
-
-.edit__icon {
+.edit__icon,
+.delete__icon {
   background-color: var(--white-color);
-  background-image: url(../img/edit-green.png);
   border-radius: 5px;
-  display: block;
-  height: 34px;
-  width: 34px;
-  background-size: 27px;
-  background-repeat: no-repeat;
-  background-position: center;
   /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
-  box-shadow: 2px 2px 2px #525252;
+  box-shadow: 2px 2px 2px 2px #525252;
+  padding: 10px;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--main-color-4);
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
 }
 
 .delete__icon {
-  background-color: var(--white-color);
-  background-image: url(../img/delete-red.png);
-  border-radius: 5px;
-  display: block;
-  height: 34px;
-  width: 34px;
-  background-size: 27px;
-  background-repeat: no-repeat;
-  background-position: center;
-  /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
-  box-shadow: 2px 2px 2px #525252;
-}
-
-.edit__icon:hover {
-  background-color: var(--main-color-3);
-  background-image: url(../img/edit-white.png);
+  background-color: rgb(150, 2, 2);
+  color: var(--white-color);
 }
 
 .delete__icon:hover {
-  background-color: var(--red-color);
-  background-image: url(../img/delete-white.png);
+  background-color: rgb(151, 54, 54);
+}
+
+.edit__icon:hover {
+  background-color: rgb(241, 241, 241);
 }

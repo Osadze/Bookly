@@ -25,7 +25,8 @@
                             <div class="product__card">
                                 <div class="product__img__cnt">
                                     <a href="/products/<%= product.id %>">
-                                        <img class="product__image" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReD-KcP8WuEfvQA79AAgQ9010An9fGkaVmVN73MtHq0Mlk729G'>
+                                        <img class="product__image"
+                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReD-KcP8WuEfvQA79AAgQ9010An9fGkaVmVN73MtHq0Mlk729G'>
                                         </img>
                                     </a>
                                 </div>
@@ -43,10 +44,9 @@
                                 <div class="product__add__to__cart">
                                     <!-- <a href="/products/<%= product.id %>"><i class="details__icon"></i></a> -->
                                     <form action="/cart" method="POST" id="addToCart">
-                                        <button type="submit"><i class="addTo__cart__icon"></i></button>
+                                        <button class="add__to__cart__btn" type="submit">CART +</button>
                                         <input type="hidden" name="productId" value="<%= product.id %>">
                                     </form>
-
                                 </div>
                             </div>
                             <% } %>

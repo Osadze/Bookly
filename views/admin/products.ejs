@@ -1,4 +1,69 @@
 <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <%- include('../includes/nav.ejs') %>
+        <main class="product-cnt main__pa">
+            <section class="filter__cnt">
+                <button class="price__filter">Price +</button>
+                <hr>
+                <button class="category__filter">Category +</button>
+                <hr>
+            </section>
+            <section class="books__cnt">
+                <div class="sub__filter">
+                    <select class="alphabet__sort" name="Alphabetically" id="alphabetSort">
+                        <option value="0">Sort by : Alphabetically, A-Z</option>
+                        <option value="1">Z-A</option>
+                    </select>
+                    <h4 class="filter__msg">Showing 1 - 12 of 26 result</h4>
+                    <form class="search__cnt">
+                        <input id="search" type="search" pattern=".*\S.*" placeholder="Search Books">
+                    </form>
+                </div>
+                <div class="product">
+                    <%if (prods.length> 0) {%>
+                        <% for (let product of prods) { %>
+                            <div class="product__card">
+                                <div class="product__img__cnt">
+                                    <a href="/products/<%= product.id %>">
+                                        <img class="product__image"
+                                            src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReD-KcP8WuEfvQA79AAgQ9010An9fGkaVmVN73MtHq0Mlk729G'>
+                                        </img>
+                                    </a>
+                                </div>
+                                <div class="product__description__cnt">
+                                    <h2 class="product__title">
+                                        <%= product.title %>
+                                    </h2>
+                                    <p class="product__author">
+                                        <%= product.description %>
+                                    </p>
+                                    <h4 class="product__price">
+                                        $ <%= product.price %>
+                                    </h4>
+                                </div>
+                                <div class="admin__edit__footer">
+                                    <a href="/admin/edit-product/<%=product.id%>?edit=true" id="edit"
+                                        class="edit__icon"> EDIT</a>
+                                    <form action="/admin/delete-product" method="POST" id="delete">
+                                        <input type="hidden" value="<%= product.id %>" name="productId">
+                                        <button class="delete__icon" type="submit">DELETE</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% } else { %>
+                                    <h1 class="no__products">No Products</h1>
+                                    <% } %>
+                </div>
+            </section>
+
+        </main>
+
+        <%- include('../includes/end.ejs') %>
+
+
+            <!-- <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/admin.css">
     <%- include('../includes/nav.ejs') %>
         <main class="product-cnt">
@@ -38,4 +103,4 @@
                             <% } %>
         </main>
 
-        <%- include('../includes/end.ejs') %>
+        <%- include('../includes/end.ejs') %> -->

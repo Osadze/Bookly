@@ -126,3 +126,23 @@
   text-transform: capitalize;
   color: var(--main-color-2);
 }
+
+.product__add__to__cart {
+  margin-top: 10px;
+}
+
+.add__to__cart__btn {
+  background-color: green;
+  border-radius: 5px;
+  /* -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
+  box-shadow: 2px 2px 2px 2px #525252;
+  padding: 10px;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--white-color);
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
+}

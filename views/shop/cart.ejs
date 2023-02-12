@@ -1,28 +1,29 @@
 <%- include('../includes/head.ejs') %>
     <link rel="stylesheet" href="/css/cart.css">
     <%- include('../includes/nav.ejs') %>
-    <div class="cart__items__cnt">
+        <div class="cart__items__cnt">
 
-        <% if (products.length > 0) { %>
+            <% if (products.length> 0) { %>
 
-            <ul class="cart__items">
-                <% products.forEach(p => { %>
-                <li>
-                    <p><%= p.productData.title %> (<%= p.qty %>) - <%= p.totalPrice%></p>
-                    <form action="/cart-delete-product" method="POST" id="deleteFromCart">
-                        <input type="hidden" value="<%= p.productData.id %>" name="productId">
-                        <button type="submit">
-                            <i class="delete__icon">
-                            </i>
-                        </button>
-                    </form>
-                </li>
-                <% }) %>
-            </ul>
-            <% } else { %>
-                <h1 class="no__products"> No Products In Cart!</h1>
-                <% } %>
+                <ul class="cart__items">
+                    <% products.forEach(p=> { %>
+                        <li>
+                            <p>
+                                <%= p.title %> Quantity - <%= p.cartItem.quantity %> - <%= p.totalPrice%>
+                            </p>
+                            <form action="/cart-delete-product" method="POST" id="deleteFromCart">
+                                <input type="hidden" value="<%= p.id %>" name="productId">
+                                <button type="submit">
+                                    DELETE
+                                </button>
+                            </form>
+                        </li>
+                        <% }) %>
+                </ul>
+                <% } else { %>
+                    <h1 class="no__products"> No Products In Cart!</h1>
+                    <% } %>
 
-    </div>
+        </div>
 
-<%- include('../includes/end.ejs') %>
+        <%- include('../includes/end.ejs') %>
